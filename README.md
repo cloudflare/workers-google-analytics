@@ -47,3 +47,7 @@ In the `head` section of your web application, load the script helper and begin 
   )
 </script>
 ```
+
+## Custom script helper
+
+The provided script helper deployed at `ga-helper.developers.workers.dev` is an example -- while you _can_ use it in production, we can't promise that it won't eventually be blocked by uBlock and other similar tools. To mitigate this, the Workers code for that domain is available in a separate repo, [workers-google-analytics-script-helper](https://github.com/signalnerve/workers-google-analytics-script-helper). You should take that code and deploy it to your own workers.dev subdomain (or a custom domain) and use it accordingly.
