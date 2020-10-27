@@ -1,0 +1,11 @@
+name = "ga-helper"
+type = "webpack"
+account_id = "95e065d2e3f97a1e50bae58aea71df6d"
+workers_dev = true
+
+# If deploying to a custom domain, fill out zone_id and route below.
+# zone_id = ""
+# route = "yourdomain.com/.cloudflare/analytics.js"
+
+[site]
+bucket = "./public"

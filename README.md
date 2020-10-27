@@ -24,7 +24,7 @@ if (analyticsResp) return analyticsResp
 In the `head` section of your web application, load the script helper and begin sending analytics events:
 
 ```html
-<script type="text/javascript" src="https://ga-helper.developers.workers.dev/analytics.js"></script>
+<script type="text/javascript" src="https://ga-helper.developers.workers.dev/_cf/analytics.js"></script>
 <script type="text/javascript">
   const GA_ID = "$YOUR_GA_ID" // In format `UA-123456-7`
   window.ga =
@@ -50,4 +50,6 @@ In the `head` section of your web application, load the script helper and begin 
 
 ## Custom script helper
 
-The provided script helper deployed at `ga-helper.developers.workers.dev` is an example -- while you _can_ use it in production, we can't promise that it won't eventually be blocked by uBlock and other similar tools. To mitigate this, the Workers code for that domain is available in a separate repo, [workers-google-analytics-script-helper](https://github.com/signalnerve/workers-google-analytics-script-helper). You should take that code and deploy it to your own workers.dev subdomain (or a custom domain) and use it accordingly.
+The provided script helper deployed at `ga-helper.developers.workers.dev` is an example -- while you _can_ use it in production, we can't promise that it won't eventually be blocked by uBlock and other similar tools.
+
+To mitigate this, the Workers code for that domain is available in the [`helper` directory](https://github.com/signalnerve/workers-google-analytics/tree/main/helper). You can take that code and deploy it to your own workers.dev subdomain (or a custom domain) and use it accordingly.
